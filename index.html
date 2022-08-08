@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VueJS Playground</title>
+  <link href="styles.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+</head>
+
+<body>
+  <!-- Data is only accesible through this div [Vue Instance] -->
+  <div id="vue-app">
+    <p>{{ name }}: {{ job }}</p>
+    <!-- Need to data bind to pass a href -->
+    <!-- v-bind means to bind data to vue  -->
+    <a v-bind:href="website">Joe's Website</a>
+    <input type="text" v-bind:value="job">
+    <button>{{ greet('night') }}</button>
+
+    <p v-html="websiteTag"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
