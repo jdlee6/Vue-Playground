@@ -61,6 +61,20 @@
     <p>Age + a = {{ addToA }}</p>
     <p>Age + b = {{ addToB }}</p>
 
+
+    <h1>Dynamic CSS</h1>
+    <h2>Example 1</h2>
+    <div v-on:click="available = !available" v-bind:class="{available: available}">
+      <span>Shown Available</span>
+    </div>
+
+    <!-- Passing all that data from Vue instance: computed -->
+    <h2>Example 2</h2>
+    <button v-on:click="nearby = !nearby">Toggle nearby</button>
+    <button v-on:click="available = !available">Toggle available</button>
+    <div v-bind:class="compClasses">
+      <span>Ryu</span>
+    </div>
   </div>
 
   <script src="app.js"></script>

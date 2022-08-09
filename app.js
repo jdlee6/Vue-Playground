@@ -11,7 +11,11 @@ new Vue({
     x: 0,
     y: 0,
     a: 2,
-    b: 3
+    b: 3,
+
+    // dynamic css   
+    available: false,
+    nearby: false,
   },
 
   methods: {
@@ -48,6 +52,12 @@ new Vue({
     addToB: function () {
       console.log('addToB called');
       return this.b + this.age;
+    },
+    compClasses: function () {
+      return {
+        available: this.available,
+        nearby: this.nearby
+      }
     }
   }
 })
