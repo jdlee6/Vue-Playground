@@ -11,16 +11,13 @@
 </head>
 
 <body>
-  <!-- Data is only accesible through this div [Vue Instance] -->
   <div id="vue-app-one">
-    <h1>Vue app one</h1>
-    <!-- Each component is instantiated as an object -->
-    <greeting></greeting>
-  </div>
+    <h2>Refs</h2>
+    <input type="text" ref="input" />
+    <button v-on:click="readRefs">Submit</button>
+    <p>Your fav food: {{ output }}</p>
 
-  <div id="vue-app-two">
-    <h1>Vue app two</h1>
-    <greeting></greeting>
+    <div ref="testRef">Testing ref</div>
   </div>
 
   <script src="app.js"></script>
