@@ -12,7 +12,21 @@
 
 <body>
   <div id="vue-app">
+    <!-- bag image -->
+    <div id="bag" v-bind:class="{ burst: ended }"></div>
 
+
+    <!-- bag health -->
+    <div id="bag-health">
+      <div v-bind:style="{ width: health + '%' }">{{ health }}</div>
+    </div>
+
+
+    <!-- bag game controls -->
+    <div id="controls">
+      <button v-on:click="punch" v-show="!ended">Punch</button>
+      <button v-on:click="restart">Restart</button>
+    </div>
   </div>
 
   <script src="app.js"></script>
