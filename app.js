@@ -1,9 +1,6 @@
 new Vue({
-  // which elements this instance will control
   el: '#vue-app',
-  // passes it to the html and the html consumes it with {{ name }}
   data: {
-    name: "Joe",
     job: "SWE",
     age: 25,
     website: "https://www.imjoelee.com",
@@ -16,8 +13,20 @@ new Vue({
     // dynamic css   
     available: false,
     nearby: false,
-  },
 
+    // conditionals
+    error: false,
+    success: false,
+
+    // looping
+    name: "Joe",
+    characters: ['Mario', 'Luigi', 'Yoshi', 'Browser'],
+    ninjas: [
+      { name: 'Ryu', age: 25 },
+      { name: 'Yoshi', age: 35 },
+      { name: 'Ken', age: 65 },
+    ]
+  },
   methods: {
     greet: function (time) {
       // this // refers to this Vue instance

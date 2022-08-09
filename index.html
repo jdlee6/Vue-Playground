@@ -75,6 +75,53 @@
     <div v-bind:class="compClasses">
       <span>Ryu</span>
     </div>
+
+
+    <h1>Conditionals</h1>
+    <button v-on:click="error = !error">Toggle Error</button>
+    <span>{{ error }}</span>
+    <button v-on:click="success = !success">Toggle Success</button>
+    <span>{{ success }}</span>
+    <!-- if error line is false -> move on to else-if statement -->
+    <!-- <p v-if="error">This is a temporary error message</p> -->
+    <!-- <p v-else-if="success">This is a success message!</p> -->
+
+    <!-- only shows when data is true -->
+    <!-- v-show toggles the display: none property -->
+    <p v-show="error">Error</p>
+    <p v-show="success">Success</p>
+
+
+    <h1>Looping with v-for</h1>
+    <!-- Can index like such -->
+    <!-- {{ characters[0] }} -->
+    <!-- {{ characters[1] }} -->
+    <ul>
+      <!-- creates a li tag element with iterated elem. character -->
+      <li v-for="character in characters">
+        {{ character }}
+      </li>
+    </ul>
+
+    <ul>
+      <li v-for="(ninja, index) in ninjas">
+        {{ ninja.name }} index: {{ index }}
+        {{ ninja.age }} index: {{ index }}
+      </li>
+    </ul>
+
+    <!-- template allows us to only output the content inside -->
+    <template v-for="(ninja, index) in ninjas">
+      <h3>{{ index }}, {{ ninja.name }}</h3>
+      <p>{{ ninja. age }}</p>
+    </template>
+
+    <!-- loop through objects -->
+    <template v-for="ninja in ninjas">
+      <div v-for="(val, key) in ninja">
+        {{ key }}:{{ val }}
+      </div>
+    </template>
   </div>
 
   <script src="app.js"></script>
