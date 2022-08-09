@@ -13,14 +13,14 @@
 <body>
   <!-- Data is only accesible through this div [Vue Instance] -->
   <div id="vue-app-one">
-    <h2>{{ title }}</h2>
-    <p>{{ greet }}</p>
+    <h1>Vue app one</h1>
+    <!-- Each component is instantiated as an object -->
+    <greeting></greeting>
   </div>
 
   <div id="vue-app-two">
-    <h2>{{ title }}</h2>
-    <p>{{ greet }}</p>
-    <button v-on:click="changeTitle">Change App One Title</button>
+    <h1>Vue app two</h1>
+    <greeting></greeting>
   </div>
 
   <script src="app.js"></script>
