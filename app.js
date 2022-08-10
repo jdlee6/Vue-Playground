@@ -1,3 +1,11 @@
+
+// Vue CLI commands
+/* 
+1. npm install -g vue cli
+2. 
+*/
+
+
 var one = new Vue({
   el: '#vue-app-one',
   data: {
